@@ -1,23 +1,25 @@
 # Automatismo.xanela.de.coche-03
 Xanela con finais de curso
-
-/*
-  Código limpo e curioso para entrega
-Aqui añadiremos os finais de carreira nas entradas 8 e 9.
+	
+                            /********
+         Código limpo e curioso para entrega
+Aqui añadiremos os finais de carreira que seran 2 pulsadores nas entradas 8 e 9.
     O cambio pasa por paro antes de comezar outro motor
      incluindo un inicio de traballo desde paro
       Programa para simular a funcion dunha xanela de automovil 
        de maneira simplificada. O motor acciona o motor se subida 
         ao ser premido, Unha segunda pulsacion fai que se accione
          o motor de baixada. o motor sube durante 7 sg despois pode baixar tamen 7sg 
+          si se activa o fcArriba o motor que se activa a continuacion e motor de Baixada
+           si se activa o fcAbaixo o motor que se activa a continiuación e motor de Subida.
 
-Entrada: Pulsador (dixital)
-Saídas:  Relé (2xdixital)
+Entrada: Pulsador (3 dixital)
+Saídas:  Relé (2x dixital)
 
 Autor:..... Juan carlos sen a comunidade
 Data: Febreiro'23
 
-*/
+                            ********/
 
 #define motorArriba 11 // no levan igual nin levan punto e coma
 #define motorAbaixo 12
@@ -25,13 +27,8 @@ Data: Febreiro'23
 #define fcArriba 8
 #define fcAbaixo 9
 
-//int motorArriba = 11; //quitamos esto con doble barra pero so queda inutilizado por se o necesitamos no futuro so temos que quitar as barras
-//int motorAbaixo = 12;  
-
 int estado = 1; //senón e bool pode tomar valores como 0, 1, 2, 3 // Con ESTADO 0 FALLABA PROBO CON 1
 int contador = 0; // contador de sinais ao motor asi o motor empeza parado
-
-/// adicion int pulsador = 0;
 
 void setup() {
     pinMode(motorArriba, OUTPUT);// pinMode e digitalMode ven sendo o mesmo so diferentes modos de nomear "sinónimos"
@@ -112,7 +109,7 @@ void loop() {
   }
 
 
-  //fin de accionamento de motores, por que?, cando pase o tempo non podemos volver a activar?
+  //fin de accionamento de motores, por que?, cando pase o tempo non podemos volver a activar? solucionado.
 
 
                                   /****** FIN
