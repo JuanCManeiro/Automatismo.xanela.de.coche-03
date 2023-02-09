@@ -2,20 +2,21 @@
 Xanela con finais de curso
 
 /*
-Nesta practica o esencial e que o cambio pase por paro antes de comezar outro motor
-o resto sera igual que na practica anterior, incluindo un inicio de traballo desde paro
-Programa para simular a funcion dunha xanela de automovil 
-de maneira simplificada. O motor acciona o motor se subida 
-ao ser premido, Unha segunda pulsacion fai que se accione
-o motor de baixada. o motor sube durante 7 sg despois pode baixar tamen 7sg 
+  Código limpo e curioso para entrega
+Aqui añadiremos os finais de carreira nas entradas 8 e 9.
+    O cambio pasa por paro antes de comezar outro motor
+     incluindo un inicio de traballo desde paro
+      Programa para simular a funcion dunha xanela de automovil 
+       de maneira simplificada. O motor acciona o motor se subida 
+        ao ser premido, Unha segunda pulsacion fai que se accione
+         o motor de baixada. o motor sube durante 7 sg despois pode baixar tamen 7sg 
 
 Entrada: Pulsador (dixital)
 Saídas:  Relé (2xdixital)
 
-Autor:..... Comunidade
+Autor:..... Juan carlos sen a comunidade
 Data: Febreiro'23
 
-Sempre despois de cada orde hay que poñer ; non telo da erro
 */
 
 #define motorArriba 11 // no levan igual nin levan punto e coma
@@ -41,10 +42,6 @@ void setup() {
 
   Serial.begin(9600); //poñemos o monitor serie en funcionamento
 
-  // int estado; //con "bool" no sitio de "int" funciona igual COMPROVAR MAIS ADIANTE
-    
- // Serial.println(estado);  // si poñemos " o monitor di o que ten escrito se non ponnos o valor da variable dada
-  
 }
 
 void loop() {
@@ -89,17 +86,7 @@ void loop() {
     
   
   // Arrancamos motores
- /* if(contador == 0)  {
-    
-  }
-  else {  //senon esta accionado lee 10 veces por sg
-      digitalWrite(motorArriba, LOW); // aqui si introducindo aqui os dous motores en baixa o chegar o contador a 0 os motores deteñense,
-      digitalWrite(motorAbaixo, LOW);
-      Serial.print("  | xanela parada |  "); 
-      delay(100);
-      contador--; ESTA FORMULA NO ME VALEU para a parada de motores cando o "contador = 0"
-      */
-    
+     
   if(contador > 0) { // aqui di que si cont>0 fai esta primeira parte sinon fai o que di o else, xq o motor non para o chegar a 0??
     if(estado == 0) {
       digitalWrite(motorArriba, HIGH);
@@ -123,15 +110,13 @@ void loop() {
   }
   }
   }
-//}
+
 
   //fin de accionamento de motores, por que?, cando pase o tempo non podemos volver a activar?
 
- // no es necesario delay(5); // con este delay final conseguimos que o contador vaia mais lento e asi danos tempo de ver o proceso e poder usar o pulsador
 
-
-
-/* Agora o proceso esta rematado de aqui en diante son datos innecesarios para o programa da xanela
+                                  /****** FIN
+  Agora o proceso esta rematado de aqui en diante son datos innecesarios para o programa da xanela
   so foron parte do traballo realizado e queda aqui para posibles consutas no futuro
 
 
